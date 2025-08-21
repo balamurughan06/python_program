@@ -212,7 +212,7 @@ print("--- lower() ---")
 lower_text = "Hello, How Are YOU?"
 lower_result = lower_text.lower()
 print(lower_result)
-'''
+
 
 #lstrip()
 print("--- lstrip() ---")
@@ -220,4 +220,105 @@ lstrip_text = "   Hello, How Are You?   "
 lstrip_result = lstrip_text.lstrip()
 print("Hi", lstrip_result, "I am fine.")
 
+#partition()
+print("--- partition() ---")
+text = "Hello How Are You?"
+print(text.partition("How"))
+print(text.partition("Hi"))
 
+#replace()
+print("--- replace() ---")
+text = "Hello How Are You?, Hello There? Hello dude."
+replaced_text = text.replace("Hello", "Hi")
+print(replaced_text)
+replaced_text2 = text.replace("Hello", "Hi", 2)  # Replace only the first two occurrence
+print(replaced_text2)
+
+#rfind()
+print("--- rfind() ---")
+text = "Hello How Are You?, Hello There? Hello dude."
+print(text.rfind("Hello")) #method finds the last occurrence of the specified value.
+print(text.rfind("Hi")) #method returns -1 if the value is not found.
+
+#rindex()
+print("--- rindex() ---")
+text = "Hello How Are You?, Hello There? Hello dude."
+print(text.rindex("Hello")) #method finds the last occurrence of the specified value.
+print(text.rindex("Hi")) #method returns ValueError if the value is not found.
+
+#rjust()
+print("--- rjust() ---")
+text = "Hello"
+print(text.rjust(10)) #Right justify the text to a width of 10 characters
+
+#rpartition()
+print("--- rpartition() ---")
+text = "Hello How Are You?"
+print(text.rpartition("How"))
+print(text.rpartition("Hi"))
+
+#rsplit()
+print("--- rsplit() ---")
+text = "apple, banana, cherry"
+print(text.rsplit(","))
+print(text.rsplit(",",0))
+
+#rstrip()
+print("--- rstrip() ---")
+text = "   Hello, How Are You?   "
+print(text.rstrip())
+
+#split()
+print("--- split() ---")
+text = "Hello, How are you?, Good"
+print(text.split(",")) # Split at all commas
+print(text.split(",", 1)) # Split only at the first comma
+
+#splitlines()
+print("--- splitlines() ---")
+text = "Hello\nHow are you?\nGood"
+print(text.splitlines()) # Split at line boundaries
+print(text.splitlines(True)) # Include line breaks
+
+#startswith()
+print("--- startswith() ---")
+text = "Hello, How Are You?"
+print(text.startswith("Hello")) # True
+print(text.startswith("Hi")) # False
+
+#strip()
+print("--- strip() ---")
+text = "   Hello, How Are You?   "
+print(text)
+print(text.strip())
+
+#swapcase()
+print("--- swapcase() ---")
+text = "Hello, How Are You?"
+print(text.swapcase())
+
+#title()
+print("--- title() ---")
+text = "hello, how are you?"
+print(text) # Original text
+print(text.title()) # Title-cased text
+
+
+#translate()
+print("--- translate() ---")
+text = "Hello, How Are You?"
+translation_table = str.maketrans("How", "Kur")
+translated_text = text.translate(translation_table)
+print(translated_text)
+
+#upper()
+print("--- upper() ---")
+text = "Hello, How Are You?" # Original text
+print(text.upper()) # Uppercased text
+'''
+#zfill()
+print("--- zfill() ---")
+text = "42"
+print(text.zfill(5)) # Zero-filled text
+text2 = "Hello"
+print(text2.zfill(10)) # Zero-filled text
